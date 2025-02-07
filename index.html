@@ -17,7 +17,7 @@
       @font-face {
     font-family: 'MangoGrotesqueBlack';
     src: url(./fonts/MangoGrotesque-Bold.ttf); /* IE9 Compat Modes */
-}
+    }
 
       * {
         margin: 0px;
@@ -93,7 +93,7 @@
         color: var(--primary);
         font-weight: 700 !important;
         border: 2px solid #ffffff;
-        animation: float 2s ease-in-out infinite;
+        /* animation: float 2s ease-in-out infinite; */
         filter: drop-shadow(0px 0px 30px rgba(255, 255, 255));
       }
 
@@ -587,7 +587,7 @@ Mayiladuthurai 609003
     <!--  conference  -->
     <section id="conference" class="w3-animate-top">
     <h1 class="title mt-5" >About the Conference</h1>
-    <div class="container bg-primary p-5 mb-5">
+    <div class="container bg-primary p-4 p-md-5 mb-5">
       <p class="text-white" style="font-size: medium;">
         Digital transformation is revolutionizing industries, reshaping business models, and enhancing operational efficiency. This conference serves as a premier platform for industry leaders, academicians, and professionals to examine the transformative impact of AI, automation, big data, cloud computing, cybersecurity, and digital strategies on modern businesses. Through insightful keynote sessions, expert panel discussions, and interactive engagements, participants will gain strategic perspectives on emerging trends, challenges, and innovative approaches to leveraging digital advancements for sustainable growth and competitive advantage.
       </p>
@@ -832,7 +832,7 @@ Mayiladuthurai 609003
   <!-- target-audience -->
   <section id="target-audience" style="display: none;" class="w3-animate-top">
     <h1 class="title mt-5 w3-animate-top">Target Audience</h1>
-    <div class="container bg-primary p-5 mb-5 w3-animate-top">
+    <div class="container bg-primary p-4 p-md-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; ">
         This conference aims to bring together academic and professional communities, including undergraduate and postgraduate students, to foster meaningful knowledge exchange and collaboration in cutting-edge research domains. It provides a platform for sharing innovative ideas, exploring emerging trends, and building networks that drive progress in various fields.
       </p>
@@ -843,7 +843,7 @@ Mayiladuthurai 609003
    <!-- publication details -->
    <section id="publication" style="display: none;" class="w3-animate-top my-5">
     <h1 class="title mt-5 w3-animate-top">Publication Details</h1>
-    <div class="container bg-primary p-5 mb-5 w3-animate-top">
+    <div class="container bg-primary p-4 p-md-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; ">
         Selected Papers will be published in the conference proceedings with an ISBN and published in a UGC approved journal with additional charges.
       </p>
@@ -856,7 +856,7 @@ Mayiladuthurai 609003
     <!-- Abt-clg -->
     <section id="Abt-clg" class="w3-animate-top" >
     <h1 class="title mt-5 w3-animate-top title">about the college</h1>
-    <div class="container bg-primary p-5 mb-5 w3-animate-top">
+    <div class="container bg-primary p-4 p-md-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; ">
         ARC Viswanathan College is a prestigious self-financing institution affiliated to Annamalai University, Chidambaram, and recognized by the Government of Tamil Nadu. Established in 2000, the college has been dedicated to delivering high-quality education, particularly to students from rural and underprivileged backgrounds, for over two decades. Founded under the ARC N. Viswanathan Chettiyar Trust, the institution embodies the philanthropic vision of the ARC family, a distinguished name in the Mayiladuthurai district, renowned for its legacy in the gold and silver jewellery industry. The college offers a comprehensive range of undergraduate and postgraduate programs, including B.A. (English), B.Sc. (Mathematics, Computer Science), B.Com. (General, Computer Applications), and B.B.A., along with M.A. (English), M.Sc. (Mathematics, Computer Science), and M.Com. In addition to its academic endeavours, the trust has established several educational and community welfare institutions, such as ARC Natesan I.T.I., ARC Kamatchi Matriculation & Higher Secondary School, and ARC Kamatchi Kalyana Mandapam, with all revenues reinvested into developmental initiatives. With a steadfast commitment to academic excellence, intellectual growth, and holistic personality development, ARC Viswanathan College continues to nurture future leaders by equipping students with industry-relevant skills, ethical values, and a strong foundation for professional success and societal contribution.
       </p>
@@ -917,6 +917,26 @@ Mayiladuthurai 609003
         stagger: {
           each: 1
         }
+      })
+
+      gsap.set("#floating-btn", {
+        y:-20,
+        text: "",
+        borderRadius: 100
+      })
+
+      gsap.to("#floating-btn",
+      {
+        borderRadius: 50,
+        text: "Register now",
+        y:10,
+        color: "#000",
+        rotatation: -5,
+        repeat: -1,
+        duration: 2,
+        delay: 2,
+        yoyo: true,
+        ease: "bounce"
       })
 
       
