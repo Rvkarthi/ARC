@@ -329,9 +329,9 @@
 
 .custom-card{
  aspect-ratio: 4/2;
- background: #001261;
+ /* background: var(--primary); */
  border-radius: 15px;
- box-shadow: 1px 5px 60px 0px #100a886b;
+ box-shadow: 1px 5px 60px 0px #04021ede;
 }
 
 .custom-card .custom-card-border-top {
@@ -468,9 +468,9 @@ Mayiladuthurai 609003
             <li class="nav-item">
               <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayConference()">About the Conference</button>
             </li>
-            <!-- <li class="nav-item">
-              <button class="nav-link float-end mx-2" style="color: #000;" onclick="displaySpeaker()">Speakers</button>
-            </li> -->
+            <li class="nav-item">
+              <button class="nav-link float-end mx-2" style="color: #000;" onclick="displaySpeaker()">Resource Person</button>
+            </li>
             <li class="nav-item">
               <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayCollege()">About the College</button>
             </li>
@@ -865,7 +865,7 @@ Mayiladuthurai 609003
   </section>
 
   <section id="speaker" style="display: none;">
-    <h1 class="text-dark mt-5">Speakers</h1>
+    <h1 class="title mt-5">Resource Person</h1>
       
     <div class="container my-5">
       <div class="row d-flex justify-content-around">
@@ -873,21 +873,18 @@ Mayiladuthurai 609003
         <div class="custom-card card-1 col-11 col-md-5 mt-4">
           <div class="custom-card-border-top">
           </div>
-          <div class="img" style="background-image: url(https://media.licdn.com/dms/image/v2/D5603AQEiYeg6HAqESA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1704981919401?e=1744243200&v=beta&t=wC6QvbpWvgG639RjqK6v2bwTftcr0khnO-GdA-SURbA); background-position: center; background-size: cover;">
+          <div class="img" style="background-image: url(profile.jpg); background-position: center; background-size: cover;">
           </div>
-          <span> Dr. R. Saranya</span>
-          <p class="job"> Assistant Professor, Dept. of CS<br>Central University of Tamil Nadu, Thiruvarur, Tamilnadu.</p>
+          <span>Dr Navaneetha Krishnan Rajagopal 
+          </span>
+          <p class="job"> Faculty
+            College of Economics and Business Administration 
+            University of Technology and Applied Sciences
+            Salalah
+            Sultanate of Oman.</p>
         </div>
 
-        <div class="custom-card card-2 col-11 col-md-5 mt-4">
-          <div class="custom-card-border-top">
-          </div>
-          <div class="img" style="background-image: url(SivaSankar.jpeg); background-position: center; background-size: cover;">
-            
-          </div>
-          <span> Dr. E. Sivasankar </span>
-          <p class="job"> Associate Professor, Dept. of CSE<br>National Institute of Technology, Tiruchirappalli, Tamilnadu. </p>
-        </div>
+        
 
       </div>
     </div>
@@ -929,7 +926,7 @@ Mayiladuthurai 609003
     
   </body>
   <script>
-    const hero =document.getElementById("hero")
+    const hero = document.getElementById("hero")
     const regEndin =document.getElementById("reg-endin")
     const conference = document.getElementById("conference")
     const impDate =document.getElementById("imp-dates")
