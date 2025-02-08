@@ -232,7 +232,7 @@
           width: 4rem;
           aspect-ratio: 1;
           bottom: 7%;
-          left: 5%;
+          right: 5%;
           z-index: 999;
           font-size: 1.5rem;
           display: flex;
@@ -507,17 +507,17 @@
     
     
 
-    <div id="hero" class="w3-animate-opacity pt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 my-5">
+    <div id="hero" class="w3-animate-opacity py-5">
+      <div class="container py-5">
+        <div class="row d-flex justify-content-between" style="flex-direction: column;">
+          <div class="col-12">
             <h1 class="text-white w3-animate-top" style="text-transform: uppercase; filter: drop-shadow(0 0 10px var(--primary));">
               International&nbsp;Conference&nbsp;on <br>
               Digital Transformation leading to Business Transformation
               <br> (ICDTBT-2025) 
 <br> <sub><p style="font-size: 15px !important; margin-top: 5px;">(Hybrid Mode)</p></sub>
               <br />
-              <p style="font-size: smaller !important;" class="mt-1">27<sup style="text-transform: none;" >th</sup> March 2025</p>
+              <p style="font-size: smaller !important;" class="mt-1">28<sup style="text-transform: none;" >th</sup> March 2025</p>
             </h1>
             
             
@@ -526,7 +526,7 @@
           
 
           <div
-            class="col-12 mt-5 py-5 d-flex justify-content-center align-items-center"
+            class="col-12 d-flex justify-content-center align-items-center"
             style="flex-direction: column"
           >
             <a id="floating-btn"
@@ -536,12 +536,12 @@
             </a>
             <br /> 
             <!-- add brochure link here -->
-            <a
+            <a id="download-btn"
               download="BROCHURE.jpg"
               href="#"
               id="download-brochure"
               class="btn btn-primary m-3 mb-5 p-3 rounded-5"
-              style="filter: drop-shadow(0px 0px 30px var(--sec));"
+              style="filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.468));"
             >
               DOWNLOAD BROCHURE 
             </a>
@@ -879,19 +879,35 @@
   </section>
 
   <section id="speaker" style="display: none;">
-    <h1 class="title mt-5">Resource Person</h1>
+    <h1 class="title mt-5">Resource Persons</h1>
       
     <div class="container my-5">
       <div class="row d-flex justify-content-around">
         <!-- From Uiverse.io by alexmaracinaru --> 
+        
         <div class="custom-card card-1 col-11 col-md-5 mt-4">
           <div class="custom-card-border-top">
           </div>
-          <div class="img" style="background-image: url(./images/profile.jpg); background-position: center; background-size: cover;">
+          <div class="img" style="background-image: url(./images/profile.jpg); background-position: center; background-size: 100%; width: 8rem; height: 8rem;">
           </div>
           <span>Mr. Sanjeev  
           </span>
-          <p class="job"> A dynamic leader and IIM Bangalore alumnus, Sanjeev boasts 30+ years of excellence in sales and IT outsourcing, driving multi-million dollar deals at Infosys, Wipro, and Tech Mahindra. Renowned for his visionary approach and strong client relationships, he exemplifies both professional and personal excellence.</p>
+          <p class="job">Vice Presedent, Tech Mahindra</p>
+        </div>
+
+        <div class="custom-card card-1 col-11 col-md-5 mt-4">
+          <div class="custom-card-border-top">
+          </div>
+          <div class="img" style="background-image: url(./images/profile1.jpg); background-position: center; background-size: 100%; width: 8rem; height: 8rem;">
+          </div>
+          <span>Dr Navaneetha Krishnan Rajagopal 
+
+          </span>
+          <p class="job">Faculty
+            College of Economics and Business Administration 
+            University of Technology and Applied Sciences
+            Salalah
+            Sultanate of Oman</p>
         </div>
 
         
@@ -918,6 +934,17 @@
         stagger: {
           each: 1
         }
+      })
+
+      gsap.set("#download-btn", {
+        y:"-1000px"
+      })
+
+      gsap.to("#download-btn", {
+        y:0,
+        duration: 1,
+        ease: "back.out",
+        delay: 2,
       })
 
       gsap.set("#floating-btn", {
