@@ -13,6 +13,7 @@
     <title>ICIRET-2025</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       @font-face {
     font-family: 'MangoGrotesqueBlack';
@@ -165,7 +166,7 @@
       }
 
       p {
-        font-family: "Poppins", serif !important;
+        font-family: "Jost", serif !important;
         font-weight: 400 !important;
         font-style: normal;
       }
@@ -231,7 +232,7 @@
           width: 4rem;
           aspect-ratio: 1;
           bottom: 7%;
-          right: 5%;
+          left: 5%;
           z-index: 999;
           font-size: 1.5rem;
           display: flex;
@@ -392,8 +393,9 @@
     </style>
   </head>
 
-  <body>
+  <body id="body">
 
+<!-- popup -->
     <div class="popup-overlay" id="popup">
       <div class="popup-content">
           <img src="imagebro.jpg" alt="Popup Image" id="popupImage">
@@ -403,6 +405,7 @@
           </div>
       </div>
   </div>
+<!-- popup -->  
 
     <button id="back"  onclick="displayHero()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
       <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
@@ -420,8 +423,8 @@
             <p class="mb-0" style="font-weight: 700;"><strong>ARC Viswanathan College</strong></p>
             <p class="small mb-0">
               (Affiliated to Annamalai University) <br>
-Near Railway Junction, Sitharkadu, <br>
-Mayiladuthurai 609003
+               Near Railway Junction, Sitharkadu, <br>
+               Mayiladuthurai 609003
             </p>
           </div>
         </div>
@@ -511,7 +514,7 @@ Mayiladuthurai 609003
             <h1 class="text-white w3-animate-top" style="text-transform: uppercase; filter: drop-shadow(0 0 10px var(--primary));">
               International&nbsp;Conference&nbsp;on <br>
               Digital Transformation leading to Business Transformation
-              <br> (ICIRET-2025) 
+              <br> (ICDTBT-2025) 
 <br> <sub><p style="font-size: 15px !important; margin-top: 5px;">(Hybrid Mode)</p></sub>
               <br />
               <p style="font-size: smaller !important;" class="mt-1">27<sup style="text-transform: none;" >th</sup> March 2025</p>
@@ -528,7 +531,7 @@ Mayiladuthurai 609003
           >
             <a id="floating-btn"
               class="btn btn-primary m-3 p-3 rounded-5 "
-              href="#"
+              href="https://forms.gle/ojfwEX9EzuRgYEHAA"
               >Register now
             </a>
             <br /> 
@@ -578,7 +581,7 @@ Mayiladuthurai 609003
           
      
 
-      <a href="#" class="mt-4 btn border rounded rounded-5 border-primary" id="reg-now">Register now -></a>
+      <a href="https://forms.gle/ojfwEX9EzuRgYEHAA" class="mt-4 btn border rounded rounded-5 border-primary" id="reg-now">Register now -></a>
       <hr />
     </div>
     
@@ -775,18 +778,20 @@ Mayiladuthurai 609003
     
     <div class="row">
         <div class="col-md-12 box">
-            <h5 class="text-center strong-text">Advisory Committee</h5>
-            <ul class="list-unstyled">
-                <li class="strong-text">Dr.S Brahadeeswaran (Scientist/Physicist), <strong>professor at BIT, AU, Tiruchirapalli</strong></li>
+            <h5 class="text-center strong-text h2">Advisory Committee</h5>
+            <ul class="list-unstyled text-center">
+                <li class="strong-text">Dr.Brahadeeswaran   Msc,  PHD</li>
 
-                <li class="strong-text">Dr. Jaffar Ali BM , <strong>Former head of Green Energy Technology , Pondicherry University</strong></li>
+                <li class="strong-text">Dr.JaffarAli   BM,MSC,PHD</strong></li>
 
-                <li class="strong-text">Neeraja Adusupalli (Engineer turned SW evangelist, <strong>account management roles finally culminating as an evangelist of “Future of Work”</strong>)</li>
+                <li class="strong-text">Neeraj Adusupalli,BTECH,atMIT AUand MTECH  in cs at JNU </li>
 
 
-                <li class="strong-text">Swaminthan Gurusamy (Physicist and an IT expert)</li>
+                <li class="strong-text">Swaminathangurusamy  IT Expert</li>
 
-                <li class="strong-text">Mr. Sanjeev dynamic leader, <strong></strong></li>
+                <li class="strong-text">Mr.Sanjeev,IIM Bangalore</li>
+
+                <li class="strong-text">Mr..Neela  Mohan  M.COM,CIMA</li>
                 
             </ul>
         </div>
@@ -795,29 +800,38 @@ Mayiladuthurai 609003
     <div class="row d-flex justify-content-around">
         
         <div class="col-md-12 box department-box">
-            <h5 class="text-center strong-text">Organizing Commitee</h5>
-            <ul class="list-unstyled">
-              <p class="mt-5 lead" style="text-decoration: underline">Convener</p>
+            <h5 class="text-center strong-text h2">Organizing Commitee</h5>
+            <ul class="list-unstyled text-center">
+              <p class="h3 mt-5 " style="text-decoration: underline">Convener</p>
 
-                <li class="strong-text">Mr.R.Balakumar, M.Com., M.Phil. – Course-In-Charge for B.Com</li>
-                <p class="mt-5 lead" style="text-decoration: underline">Coordinator</p>
+                <li class="strong-text">R.Balakumar, Head of the Department.</li>
 
-                <li class="strong-text">Ms.N.Srividhya, M.Com.</li>
-                <p class="mt-5 lead" style="text-decoration: underline">Staffs</p>
+                <p class="h3 mt-5 " style="text-decoration: underline">Coordinator</p>
 
-      
-
-                <li class="strong-text">Dr.K.Indhumathy B.Sc, B.Ed, MCA, Ph.D – Head of the Department – B.Sc and BCA</li>
-                <li class="strong-text">Mr.Raja Thangavelu, BSc, B.Tech, PGCBM, PMP(USA) – Industry Expert, Consultant</li>
-                <li class="strong-text">Ms.B.Kanagavalli, M.Sc.</li>
-                <li class="strong-text">Mrs.P.Ponmani..,M.C.A</li>
+                <li class="strong-text">Ms.N.Srividhya, Assistant Professor of Commerce</li>
+                <li class="strong-text">Mrs.D.Nandhini, Assistant Professor of Computer Science</li>
+                
+                <p class="h3 mt-5 " style="text-decoration: underline">Organising  committee members:</p>
+                
+                
+                <p class="h3 mt-4 ">Department of Computer Science:</p>
+                
+                <li class="strong-text">P.ponmani  Head of the  department</li>
+                <li class="strong-text">D.Nandhini,Assistant professor of CS</li>
+                <li class="strong-text">G.GaneshBakthavachalam,BE,CSM Professor of practice</li>
+                <li class="strong-text">Mr.Raja Thangavelu,Bsc,B.Tech,PGCBM,Professor  of practice</li>
                 <li class="strong-text">Mrs.D.Nandhini.,MSc(SE).,  MPhil. – Course-In-Charge for BCA</li>
-                <li class="strong-text">Ms.N.Akila, M.Sc., M.Phil.</li>
-
-                <li class="strong-text">Dr.C.Rajeswari, M.Com., M.Phil, Ph.D. Head Dept of B.com & BBA</li>
-                <li class="strong-text">Mr.S.Christopher Brown, M.Com., M.Phil.</li>
-                <li class="strong-text">Mrs.K.Sujatha M.Com., M.Phil.</li>
-                <li class="strong-text">Mr.R. Mukesh M.Com.,</li>
+                <li class="strong-text">R.Dhanalakshmi, , Assistant professor of CS</li>
+                
+                <p class="h3 mt-4 ">Department of Commerce:</p>
+                
+                <li class="strong-text">R.Balakumar, Head  of  the  department</li>
+                <li class="strong-text">N.Srividhya, Assistant professor of commerce</li>
+                <li class="strong-text">K.Hariharan, Assistant professor of commerce</li>
+                <li class="strong-text">K.Valli, Assistant professor of commerce</li>
+                <li class="strong-text">B.Sasikala, Assistant professor of commerce</li>
+                <li class="strong-text">K.Ashok kumar, Assistant professor of commerce</li>
+                <li class="strong-text">G.Jayachithra, Assistant professor of commerce</li>
                 
                 
             </ul>
@@ -858,7 +872,7 @@ Mayiladuthurai 609003
     <h1 class="title mt-5 w3-animate-top title">about the college</h1>
     <div class="container bg-primary p-4 p-md-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; ">
-        ARC Viswanathan College is a prestigious self-financing institution affiliated to Annamalai University, Chidambaram, and recognized by the Government of Tamil Nadu. Established in 2000, the college has been dedicated to delivering high-quality education, particularly to students from rural and underprivileged backgrounds, for over two decades. Founded under the ARC N. Viswanathan Chettiyar Trust, the institution embodies the philanthropic vision of the ARC family, a distinguished name in the Mayiladuthurai district, renowned for its legacy in the gold and silver jewellery industry. The college offers a comprehensive range of undergraduate and postgraduate programs, including B.A. (English), B.Sc. (Mathematics, Computer Science), B.Com. (General, Computer Applications), and B.B.A., along with M.A. (English), M.Sc. (Mathematics, Computer Science), and M.Com. In addition to its academic endeavours, the trust has established several educational and community welfare institutions, such as ARC Natesan I.T.I., ARC Kamatchi Matriculation & Higher Secondary School, and ARC Kamatchi Kalyana Mandapam, with all revenues reinvested into developmental initiatives. With a steadfast commitment to academic excellence, intellectual growth, and holistic personality development, ARC Viswanathan College continues to nurture future leaders by equipping students with industry-relevant skills, ethical values, and a strong foundation for professional success and societal contribution.
+        ARC Viswanathan College is a prestigious self-financing institution affiliated to Annamalai University, Chidambaram, and recognized by the Government of Tamil Nadu. Established in 2000, the college has been dedicated to delivering high-quality education, particularly to students from rural and underprivileged backgrounds, for over two decades. Founded under the ARC N. Viswanathan Chettiyar Trust, the institution embodies the philanthropic vision of the ARC family, a distinguished name in the Mayiladuthurai district, renowned for its legacy in the gold and silver jewellery industry. The college offers a comprehensive range of undergraduate and postgraduate programs, including B.A. (English), B.Sc. (Mathematics, Computer Science) and B.Sc Artificial Inteligence, B.Com. (General, Computer Applications), B.C.A and B.B.A., along with M.Com. In addition to its academic endeavours, the trust has established several educational and community welfare institutions, such as ARC Natesan I.T.I., ARC Kamatchi Matriculation & Higher Secondary School, and ARC Kamatchi Kalyana Mandapam, with all revenues reinvested into developmental initiatives. With a steadfast commitment to academic excellence, intellectual growth, and holistic personality development, ARC Viswanathan College continues to nurture future leaders by equipping students with industry-relevant skills, ethical values, and a strong foundation for professional success and societal contribution.
       </p>
     </div>
     
@@ -873,15 +887,11 @@ Mayiladuthurai 609003
         <div class="custom-card card-1 col-11 col-md-5 mt-4">
           <div class="custom-card-border-top">
           </div>
-          <div class="img" style="background-image: url(profile.jpg); background-position: center; background-size: cover;">
+          <div class="img" style="background-image: url(./images/profile.jpg); background-position: center; background-size: cover;">
           </div>
-          <span>Dr Navaneetha Krishnan Rajagopal 
+          <span>Mr. Sanjeev  
           </span>
-          <p class="job"> Faculty
-            College of Economics and Business Administration 
-            University of Technology and Applied Sciences
-            Salalah
-            Sultanate of Oman.</p>
+          <p class="job"> A dynamic leader and IIM Bangalore alumnus, Sanjeev boasts 30+ years of excellence in sales and IT outsourcing, driving multi-million dollar deals at Infosys, Wipro, and Tech Mahindra. Renowned for his visionary approach and strong client relationships, he exemplifies both professional and personal excellence.</p>
         </div>
 
         
@@ -895,19 +905,10 @@ Mayiladuthurai 609003
     <!-- bootstrap -->
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+      gsap.registerPlugin(ScrollTrigger) 
       
-
-      gsap.to("#linkedin", {
-          width: "10%",
-          duration: 2,
-          borderRadius: 100,
-          ease: "linear",
-          repeat: -1,
-          yoyo: true
-      });
-
       gsap.to(".custom-card", {
         y:-10,
         repeat: -1,
@@ -936,7 +937,7 @@ Mayiladuthurai 609003
         duration: 2,
         delay: 2,
         yoyo: true,
-        ease: "bounce"
+        ease: "bounce.out"
       })
 
       
