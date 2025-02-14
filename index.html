@@ -1,453 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <!-- w3 animation -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>ICIRET-2025</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-      @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      @font-face {
-    font-family: 'MangoGrotesqueBlack';
-    src: url(./fonts/MangoGrotesque-Bold.ttf); /* IE9 Compat Modes */
+  <!-- w3 animation -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>ICIRET-2025</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+    @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+    @font-face {
+      font-family: 'MangoGrotesqueBlack';
+      src: url(./fonts/MangoGrotesque-Bold.ttf);
+      /* IE9 Compat Modes */
     }
 
-      * {
-        margin: 0px;
+    * {
+      margin: 0px;
+    }
+
+    :root {
+      --primary: #003366;
+      --sec: #4EE3FF;
+      --other: #D6EBFF;
+    }
+
+    th {
+      background-color: var(--primary) !important;
+      color: var(--other) !important;
+    }
+
+    td {
+      background-color: var(--primary) !important;
+      color: var(--other) !important;
+    }
+
+    .text-white {
+      color: var(--other) !important;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
       }
 
-      :root {
-        --primary: #003366;
-        --sec: #4EE3FF;
-        --other: #D6EBFF;
+      50% {
+        transform: translateY(-10px) rotate(3deg);
+        /* Move up and rotate slightly */
       }
+    }
 
-      th{
-        background-color: var(--primary) !important;
-        color:var(--other) !important;
-      }
-
-      td{
-        background-color: var(--primary) !important;
-        color:var(--other) !important;
-      }
-
-      .text-white{
-        color: var(--other) !important;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0) rotate(0deg);
-        }
-        50% {
-          transform: translateY(-10px) rotate(3deg); /* Move up and rotate slightly */
-        }
-      }
+    .text-primary{
+      color: var(--primary) !important;
+    }
 
 
-      
 
-      body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  overflow: auto;
-  background-color: #003366;
-  /* background-image:url(https://i.pinimg.com/736x/c9/62/eb/c962eb5ee6b116333e8594b70122322d.jpg); */
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-      }
 
-      .card{
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: auto;
+      background-color: #003366;
+      /* background-image:url(https://i.pinimg.com/736x/c9/62/eb/c962eb5ee6b116333e8594b70122322d.jpg); */
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    .card {
       /* border-top: 2px solid --other;
       border-left: 2px solid #0d7aff; */
-        border: 2px solid var(--other)  ;
-        box-shadow: 5px 5px 12px #00000035;
-        /* filter: drop-shadow(0px 0px 30px #ffffffa8); */
-        background-color: var(--primary);
-        border-radius: 15px;
-        overflow: hidden;
-        padding: 1.5rem;
-        backdrop-filter: blur(10px);
-        color: rgb(255, 255, 255);
+      border: 2px solid var(--other);
+      box-shadow: 5px 5px 12px #00000035;
+      /* filter: drop-shadow(0px 0px 30px #ffffffa8); */
+      background-color: var(--primary);
+      border-radius: 15px;
+      overflow: hidden;
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      color: rgb(255, 255, 255);
     }
-     
-    
-      .card-img-top {
-        object-fit: cover; /* Ensures the image scales properly */
-      }
 
 
-      #floating-btn {
-        background-color: #fff !important;
-        color: var(--primary);
-        font-weight: 700 !important;
-        border: 2px solid #ffffff;
-        /* animation: float 2s ease-in-out infinite; */
-        filter: drop-shadow(0px 0px 30px rgba(255, 255, 255));
-      }
-
-      /* Optional hover effect */
-      #floating-btn:hover {
-        color: black;
-        animation-play-state: paused; /* Pause animation on hover */
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Add a glow effect */
-      }
-
-      /* Countdown container styles */
-.countdown-container {
-  text-align: center;
-}
-
-/* Countdown box styles */
-.countdown-box {
-  border: 2px solid var(--primary);
-  border-radius: 8px;
-  padding: 10px;
-  margin: 5px;
-  background-color: #f8f9fa; /* Light background */
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Countdown time (numbers) */
-.countdown-time {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--primary);
-}
-
-/* Countdown labels (Days, Hours, etc.) */
-.countdown-label {
-  font-size: 1rem;
-  color: #6c757d;
-}
-
-/* Spacing for mobile */
-@media (max-width: 575.98px) {
-  .countdown-box {
-    margin: 5px 2px; /* Reduce margin for smaller screens */
-    padding: 8px;
-  }
-}
-
-
-      .btn-primary,
-      .bg-primary {
-        background-color: var(--primary) !important;
-        border-radius: 25px 0px 25px 0px;
-        border: 2px solid var(--other);
-        /* filter: drop-shadow(0px 0px 10px white); */
-      }
-
-      h1,
-      h2,
-      h3,
-      h4,
-      span {
-        font-family: "Anton", serif;
-        font-weight: 300;
-        font-style: normal;
-        font-optical-sizing: auto;
-        color: var(--primary);
-        letter-spacing: 1.5px;
-        text-align: center;
-      }
-
-      p {
-        font-family: "Jost", serif !important;
-        font-weight: 400 !important;
-        font-style: normal;
-      }
-
-      .btn {
-        font-family: "Poppins", serif !important;
-        font-weight: 400 !important;
-        font-style: normal;
-      }
-
-
-      #hero {
-        background-image: url(sun-tornado.svg);
-        background-size: cover;
-        filter: brightness(1.1);
-        object-fit: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        height: 100vh;
-        height: 100dvh; 
-        height: 100svh;
-        height: 100lvh;
-        display: flex;
-        flex-direction: column;
-      }
-
-      #reg-now{
-        background-color: var(--other);
-        border: 2px solid var(--primary);
-        color: #000459; 
-        font-weight: bold;
-        &:hover{
-          filter: drop-shadow(0px 0px 15px var(--sec));
-          color: var(--primary);
-          transition: 0.5s;
-        }
-      }
-
-      .list-group-item{
-        background-color: var(--primary);
-        border:2px solid --other;
-        color: white;
-      }
-
-      .box {
-            border: 2px solid #000;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            background-color: var(--other);
-        }
-        .department-box {
-            margin-bottom: 30px;
-        }
-        .strong-text {
-            font-weight: bold;
-        }
-
-        #back{
-          position: fixed !important;
-          background-color: #ffffff76;
-          width: 4rem;
-          aspect-ratio: 1;
-          bottom: 7%;
-          right: 5%;
-          z-index: 999;
-          font-size: 1.5rem;
-          display: flex;
-          justify-content: center;
-          border: 5px solid var(--other);
-          filter: drop-shadow(0px 0px 10px#ffffff);
-          backdrop-filter: blur(1.5px);
-          align-items: center;
-          border-radius: 50%;
-        }
-
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: none;/*  make it flex  */
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-
-        .popup-content {
-            position: relative;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-
-        .popup-content img {
-            max-width: 100%;
-            height: 80vh;  
-            aspect-ratio: 1/1.414;
-            border-radius: 10px;
-        }
-
-        .popup-buttons {
-            margin-top: 15px;
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-        }
-
-        .popup-buttons button {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        .popup-buttons .close-btn {
-            background-color: #f44336;
-            color: white;
-        }
-
-        .popup-buttons .download-btn {
-            background-color: #4caf50;
-            color: white;
-        }
-
-        .navbar-logo {
-      height: 60px; /* Adjust logo size */
+    .card-img-top {
+      object-fit: cover;
+      /* Ensures the image scales properly */
     }
+
+
+    #floating-btn {
+      background-color: #fff !important;
+      color: var(--primary);
+      font-weight: 700 !important;
+      border: 2px solid #ffffff;
+      /* animation: float 2s ease-in-out infinite; */
+      filter: drop-shadow(0px 0px 30px rgba(255, 255, 255));
+    }
+
+    /* Optional hover effect */
+    #floating-btn:hover {
+      color: black;
+      animation-play-state: paused;
+      /* Pause animation on hover */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+      /* Add a glow effect */
+    }
+
+    /* Countdown container styles */
+    .countdown-container {
+      text-align: center;
+    }
+
+    /* Countdown box styles */
+    .countdown-box {
+      border: 2px solid var(--primary);
+      border-radius: 8px;
+      padding: 10px;
+      margin: 5px;
+      background-color: #f8f9fa;
+      /* Light background */
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Countdown time (numbers) */
+    .countdown-time {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    /* Countdown labels (Days, Hours, etc.) */
+    .countdown-label {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+
+    /* Spacing for mobile */
+    @media (max-width: 575.98px) {
+      .countdown-box {
+        margin: 5px 2px;
+        /* Reduce margin for smaller screens */
+        padding: 8px;
+      }
+    }
+
+
+    .btn-primary,
+    .bg-primary {
+      background-color: var(--primary) !important;
+      border-radius: 25px 0px 25px 0px;
+      border: 2px solid var(--other);
+      /* filter: drop-shadow(0px 0px 10px white); */
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    span {
+      font-family: "Anton", serif;
+      font-weight: 300;
+      font-style: normal;
+      font-optical-sizing: auto;
+      color: var(--primary);
+      letter-spacing: 1.5px;
+      text-align: center;
+    }
+
+    p {
+      font-family: "Jost", serif !important;
+      font-weight: 400 !important;
+      font-style: normal;
+    }
+
+    .btn {
+      font-family: "Poppins", serif !important;
+      font-weight: 400 !important;
+      font-style: normal;
+    }
+
+
+    #hero {
+      background-image: url(sun-tornado.svg);
+      background-size: cover;
+      filter: brightness(1.1);
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh;
+      height: 100dvh;
+      height: 100svh;
+      height: 100lvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #reg-now {
+      background-color: var(--other);
+      border: 2px solid var(--primary);
+      color: #000459;
+      font-weight: bold;
+
+      &:hover {
+        filter: drop-shadow(0px 0px 15px var(--sec));
+        color: var(--primary);
+        transition: 0.5s;
+      }
+    }
+
+    .list-group-item {
+      background-color: var(--primary);
+      border: 2px solid --other;
+      color: white;
+    }
+
+    .box {
+      border: 2px solid #000;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      background-color: var(--other);
+    }
+
+    .department-box {
+      margin-bottom: 30px;
+    }
+
+    .strong-text {
+      font-weight: bold;
+    }
+
+    #back {
+      position: fixed !important;
+      background-color: #ffffff76;
+      width: 4rem;
+      aspect-ratio: 1;
+      bottom: 7%;
+      right: 5%;
+      z-index: 999;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      border: 5px solid var(--other);
+      filter: drop-shadow(0px 0px 10px#ffffff);
+      backdrop-filter: blur(1.5px);
+      align-items: center;
+      border-radius: 50%;
+    }
+
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+      /*  make it flex  */
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .popup-content {
+      position: relative;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .popup-content img {
+      max-width: 100%;
+      height: 80vh;
+      aspect-ratio: 1/1.414;
+      border-radius: 10px;
+    }
+
+    .popup-buttons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .popup-buttons button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .popup-buttons .close-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .popup-buttons .download-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .navbar-logo {
+      height: 60px;
+      /* Adjust logo size */
+    }
+
     .navbar-title {
       font-size: 16px;
       font-weight: 700;
       text-align: center;
     }
+
     .navbar-subtitle {
       font-size: 14px;
       font-weight: 500;
       text-align: center;
     }
+
     .navbar-text {
       font-size: 12px;
       text-align: center;
     }
+
     @media (max-width: 768px) {
-      .navbar-title, .navbar-subtitle, .navbar-text {
-        font-size: 10px; /* Resize font for smaller screens */
+
+      .navbar-title,
+      .navbar-subtitle,
+      .navbar-text {
+        font-size: 10px;
+        /* Resize font for smaller screens */
       }
     }
 
-    
+
 
     .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M2 3h12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2zM2 8h12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2zM2 13h12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2z'/%3E%3C/svg%3E");
-}
-    
-
-.custom-card{
- aspect-ratio: 4/2;
- /* background: var(--primary); */
- border-radius: 15px;
- box-shadow: 1px 5px 60px 0px #04021ede;
-}
-
-.custom-card .custom-card-border-top {
- width: 60%;
- height: 3%;
- background: var(--other);
- margin: auto;
- border-radius: 0px 0px 15px 15px;
-}
-
-.custom-card span {
- font-weight: 350;
- color: white;
- text-align: center;
- display: block;
- padding-top: 10px;
- font-size: 1.5rem;
-}
-
-.custom-card .job {
- font-weight: 400;
- color: white;
- display: block;
- text-align: center;
- padding-top: 3px;
- font-size: 1rem;
-}
-
-.custom-card .img {
-  height: 35%;
-  aspect-ratio: 1/1;
- border-radius: 15px;
- margin: auto;
- margin-top: 25px;
-}
-
-.title {
-  font-family: 'MangoGrotesqueBlack', sans-serif !important; /* Add a fallback font */
-  margin-bottom: 10px !important;
-  font-size: 3rem;
-  font-weight: 500;
-  text-transform: uppercase !important;
-  color: var(--other);
-  position: relative; /* Needed for the pseudo-element positioning */
-}
-
-.title::before {
-  content: '';
-  position: absolute;
-  bottom: -0.5px;
-  left: 0px;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(328deg, var(--primary), var(--other), var(--primary)); /* Fixed syntax */
-}
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M2 3h12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2zM2 8h12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2zM2 13h12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2z'/%3E%3C/svg%3E");
+    }
 
 
-    </style>
-  </head>
+    .custom-card {
+      aspect-ratio: 4/2;
+      /* background: var(--primary); */
+      border-radius: 15px;
+      box-shadow: 1px 5px 60px 0px #04021ede;
+    }
 
-  <body id="body">
+    .custom-card .custom-card-border-top {
+      width: 60%;
+      height: 3%;
+      background: var(--other);
+      margin: auto;
+      border-radius: 0px 0px 15px 15px;
+    }
 
-<!-- popup -->
-    <div class="popup-overlay" id="popup">
-      <div class="popup-content">
-          <img src="imagebro.jpg" alt="Popup Image" id="popupImage">
-          <div class="popup-buttons">
-              <button class="download-btn" id="downloadBtn">Download</button>
-              <button class="close-btn" id="closeBtn">Close</button>
-          </div>
+    .custom-card span {
+      font-weight: 350;
+      color: white;
+      text-align: center;
+      display: block;
+      padding-top: 10px;
+      font-size: 1.5rem;
+    }
+
+    .custom-card .job {
+      font-weight: 400;
+      color: white;
+      display: block;
+      text-align: center;
+      padding-top: 3px;
+      font-size: 1rem;
+    }
+
+    .custom-card .img {
+      height: 35%;
+      aspect-ratio: 1/1;
+      border-radius: 15px;
+      margin: auto;
+      margin-top: 25px;
+    }
+
+    .title {
+      font-family: 'MangoGrotesqueBlack', sans-serif !important;
+      /* Add a fallback font */
+      margin-bottom: 10px !important;
+      font-size: 3rem;
+      font-weight: 500;
+      text-transform: uppercase !important;
+      color: var(--other);
+      position: relative;
+      /* Needed for the pseudo-element positioning */
+    }
+
+    .title::before {
+      content: '';
+      position: absolute;
+      bottom: -0.5px;
+      left: 0px;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(328deg, var(--primary), var(--other), var(--primary));
+      /* Fixed syntax */
+    }
+  </style>
+</head>
+
+<body id="body">
+
+  <!-- popup -->
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <img src="imagebro.jpg" alt="Popup Image" id="popupImage">
+      <div class="popup-buttons">
+        <button class="download-btn" id="downloadBtn">Download</button>
+        <button class="close-btn" id="closeBtn">Close</button>
       </div>
+    </div>
   </div>
-<!-- popup -->  
+  <!-- popup -->
 
-    <button id="back"  onclick="displayHero()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-      <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+  <button id="back" onclick="displayHero()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+      fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+      <path
+        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
     </svg></button>
 
-    <nav class="navbar navbar-light bg-body-dark" style="background-color: var(--other);">
-      <div class="container-fluid">
-        <!-- Logo and Institution Info -->
-        <div class="d-flex">
-          <!-- Main Logo -->
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQToo6RmxLqM2_0TeIf2IwIII4vbeVnolvQ8A&s" alt="Main Logo" class="me-2" style="height: 60px; max-height: 80px; mix-blend-mode:darken;">
-          
-          <!-- Institution Info -->
-          <div class="pb-2 pb-md-0">
-            <p class="mb-0" style="font-weight: 700;"><strong>ARC Viswanathan College</strong></p>
-            <p class="small mb-0">
-              (Affiliated to Annamalai University) <br>
-               Near Railway Junction, Sitharkadu, <br>
-               Mayiladuthurai 609003
-            </p>
-          </div>
+  <nav class="navbar navbar-light bg-body-dark" style="background-color: var(--other);">
+    <div class="container-fluid">
+      <!-- Logo and Institution Info -->
+      <div class="d-flex">
+        <!-- Main Logo -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQToo6RmxLqM2_0TeIf2IwIII4vbeVnolvQ8A&s"
+          alt="Main Logo" class="me-2" style="height: 60px; max-height: 80px; mix-blend-mode:darken;">
+
+        <!-- Institution Info -->
+        <div class="pb-2 pb-md-0">
+          <p class="mb-0" style="font-weight: 700;"><strong>ARC Viswanathan College</strong></p>
+          <p class="small mb-0">
+            (Affiliated to Annamalai University) <br>
+            Near Railway Junction, Sitharkadu, <br>
+            Mayiladuthurai 609003
+          </p>
         </div>
+      </div>
 
 
-        <button
-        class="navbar-toggler text-white btn ms-auto"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        style="background-color: var(--primary);"
-      >
-        
+      <button class="navbar-toggler text-white btn ms-auto" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+        style="background-color: var(--primary);">
+
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      </div>
-        
-    
-        <!-- Conference Info
+    </div>
+
+
+    <!-- Conference Info
         <div class="d-flex mt-1 mx-auto">
           <img src="https://www.gibsonhospital.org/image/4311/400" alt="ISO Logo" style="height: 80px; max-height: 80px;" class="mt-2 me-2">
         <div class="text-center d-flex justify-content-center align-items-center wrap" style="flex-direction: column;">
@@ -456,213 +481,222 @@
             </h5>
           <h5 class="mb-0 text-md-nowrap text-primary" style="font-weight: 700; ">28th March 2025</h5>
         </div> -->
-        
-        
-    
-        <!-- Toggler for mobile -->
-        
-    
-        <!-- Navigation Links -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <button class="nav-link float-end mx-2 mt-3" style="color: #000;" onclick="displayHero()">Home</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayConference()">About the Conference</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link float-end mx-2" style="color: #000;" onclick="displaySpeaker()">Resource Person</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayCollege()">About the College</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayChief()">Committees</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayCallforpapers()">Conference Tracks & Important Dates</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayTarget()">Target Audience</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayRegister()">Registration Form & Fees Details</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayPublication()">Publication Details</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link float-end mx-2" style="color: #000;" onclick="contacts()">Contact Us</button>
-            </li>
-          </ul>
+
+
+
+    <!-- Toggler for mobile -->
+
+
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <button class="nav-link float-end mx-2 mt-3" style="color: #000;" onclick="displayHero()">Home</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayConference()">About the
+            Conference</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link float-end mx-2" style="color: #000;" onclick="displaySpeaker()">Resource
+            Person</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayCollege()">About the
+            College</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayChief()">Committees</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayCallforpapers()">Conference
+            Tracks & Important Dates</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayTarget()">Target
+            Audience</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayRegister()">Registration Form &
+            Fees Details</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link float-end mx-2" style="color: #000;" onclick="displayPublication()">Publication
+            Details</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link float-end mx-2" style="color: #000;" onclick="contacts()">Contact Us</button>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+
+
+
+
+  <!-- <img src="image.png" class="img-fluid mt-5 pt-2" style="object-fit: cover; object-position: center;" alt=""> -->
+
+
+
+  <div id="hero" class="w3-animate-opacity py-5">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-between" style="flex-direction: column;">
+        <div class="col-12">
+          <h1 class="text-white w3-animate-top"
+            style="text-transform: uppercase; filter: drop-shadow(0 0 10px var(--primary));">
+            International&nbsp;Conference&nbsp;on <br>
+            Digital Transformation leading to Business Transformation
+            <br> (ICDTBT-2025)
+            <br> <sub>
+              <p style="font-size: 15px !important; margin-top: 5px;">(Hybrid Mode)</p>
+            </sub>
+            <br />
+            <p style="font-size: smaller !important;" class="mt-1">28<sup style="text-transform: none;">th</sup> March
+              2025</p>
+          </h1>
+
+
         </div>
-      </div>
-    </nav>
-    
-    
-    
 
-    <!-- <img src="image.png" class="img-fluid mt-5 pt-2" style="object-fit: cover; object-position: center;" alt=""> -->
-    
-    
 
-    <div id="hero" class="w3-animate-opacity py-5">
-      <div class="container py-5">
-        <div class="row d-flex justify-content-between" style="flex-direction: column;">
-          <div class="col-12">
-            <h1 class="text-white w3-animate-top" style="text-transform: uppercase; filter: drop-shadow(0 0 10px var(--primary));">
-              International&nbsp;Conference&nbsp;on <br>
-              Digital Transformation leading to Business Transformation
-              <br> (ICDTBT-2025) 
-<br> <sub><p style="font-size: 15px !important; margin-top: 5px;">(Hybrid Mode)</p></sub>
-              <br />
-              <p style="font-size: smaller !important;" class="mt-1">28<sup style="text-transform: none;" >th</sup> March 2025</p>
-            </h1>
-            
-            
-          </div>
 
-          
-
-          <div
-            class="col-12 d-flex justify-content-center align-items-center"
-            style="flex-direction: column"
-          >
-            <a id="floating-btn"
-              class="btn btn-primary m-3 p-3 rounded-5 "
-              href="https://forms.gle/ojfwEX9EzuRgYEHAA"
-              >Register now
-            </a>
-            <br /> 
-            <!-- add brochure link here -->
-            <a id="download-btn"
-              download="BROCHURE.jpg"
-              href="#"
-              id="download-brochure"
-              class="btn btn-primary m-3 mb-5 p-3 rounded-5"
-              style="filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.468));"
-            >
-              DOWNLOAD BROCHURE 
-            </a>
-          </div>
+        <div class="col-12 d-flex justify-content-center align-items-center" style="flex-direction: column">
+          <a id="floating-btn" class="btn btn-primary m-3 p-3 rounded-5 "
+            href="https://forms.gle/ojfwEX9EzuRgYEHAA">Register now
+          </a>
+          <br />
+          <!-- add brochure link here -->
+          <a id="download-btn" download="BROCHURE.jpg" href="#" id="download-brochure"
+            class="btn btn-primary m-3 mb-5 p-3 rounded-5"
+            style="filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.468));">
+            DOWNLOAD BROCHURE
+          </a>
         </div>
       </div>
     </div>
+  </div>
 
+  <hr />
+
+  <!-- reg -->
+  <div class="container countdown-container my-5" id="reg-endin">
+    <h1 class="countdown-header title">Register Ends In</h1>
+    <div class="row justify-content-center">
+      <div class="col-2 countdown-box">
+        <div class="countdown-time" id="days">00</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="col-2 countdown-box">
+        <div class="countdown-time" id="hours">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="col-2 countdown-box">
+        <div class="countdown-time" id="minutes">00</div>
+        <div class="countdown-label">Min</div>
+      </div>
+      <div class="col-2 countdown-box">
+        <div class="countdown-time" id="seconds">00</div>
+        <div class="countdown-label">Sec</div>
+      </div>
+    </div>
+
+
+    <p class="mt-2 text-white">For Students - ₹150</p>
+    <p class="text-white">Faculty members - ₹250</p>
+    <p class="text-white">Industry Persons - ₹500</p>
+
+
+
+    <a href="https://forms.gle/ojfwEX9EzuRgYEHAA" class="mt-4 btn border rounded rounded-5 border-primary"
+      id="reg-now">Register now -></a>
     <hr />
-
-    <!-- reg -->
-    <div class="container countdown-container my-5" id="reg-endin">
-      <h1 class="countdown-header title">Register Ends In</h1>
-      <div class="row justify-content-center">
-        <div class="col-2 countdown-box">
-          <div class="countdown-time" id="days">00</div>
-          <div class="countdown-label">Days</div>
-        </div>
-        <div class="col-2 countdown-box">
-          <div class="countdown-time" id="hours">00</div>
-          <div class="countdown-label">Hours</div>
-        </div>
-        <div class="col-2 countdown-box">
-          <div class="countdown-time" id="minutes">00</div>
-          <div class="countdown-label">Min</div>
-        </div>
-        <div class="col-2 countdown-box">
-          <div class="countdown-time" id="seconds">00</div>
-          <div class="countdown-label">Sec</div>
-        </div>
-      </div>
-      
-      
-          <p class="mt-2 text-white">For Students - ₹150</p>
-          <p class="text-white">Faculty members - ₹250</p>
-          <p class="text-white">Industry Persons - ₹500</p>
-          
-     
-
-      <a href="https://forms.gle/ojfwEX9EzuRgYEHAA" class="mt-4 btn border rounded rounded-5 border-primary" id="reg-now">Register now -></a>
-      <hr />
-    </div>
-    
+  </div>
 
 
-    <!--  conference  -->
-    <section id="conference" class="w3-animate-top">
-    <h1 class="title mt-5" >About the Conference</h1>
+
+  <!--  conference  -->
+  <section id="conference" class="w3-animate-top">
+    <h1 class="title mt-5">About the Conference</h1>
     <div class="container bg-primary p-4 p-md-5 mb-5">
       <p class="text-white" style="font-size: medium;">
-        Digital transformation is revolutionizing industries, reshaping business models, and enhancing operational efficiency. This conference serves as a premier platform for industry leaders, academicians, and professionals to examine the transformative impact of AI, automation, big data, cloud computing, cybersecurity, and digital strategies on modern businesses. Through insightful keynote sessions, expert panel discussions, and interactive engagements, participants will gain strategic perspectives on emerging trends, challenges, and innovative approaches to leveraging digital advancements for sustainable growth and competitive advantage.
+        Digital transformation is revolutionising industries, reshaping business models, and enhancing operational
+        efficiency. This conference serves as a premier platform for industry leaders, academicians, and professionals
+        to examine the transformative impact of Artificial Inteligence, Automation, Big data, Cloud computing,
+        Cybersecurity, and digital strategies on modern businesses. Through insightful keynote sessions, expert panel
+        discussions, and interactive engagements, participants will gain strategic perspectives on emerging trends,
+        challenges, and innovative approaches to leveraging digital advancements for sustainable growth and competitive
+        advantage.
       </p>
     </div>
     <hr />
-    </section>
+  </section>
 
 
 
-    <!-- imp-dates -->
-    <section id="imp-dates" class="w3-animate-top">
-    <h1 class="title mt-5" >Important Dates</h1>
+  <!-- imp-dates -->
+  <section id="imp-dates" class="w3-animate-top">
+    <h1 class="title mt-5">Important Dates</h1>
     <div class="container mb-5">
       <div class="row justify-content-center">
         <div class="card a col-11 m-3 col-md-5 justify-content-center ">
 
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-calendar3-range-fill card-img-top" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2 0a2 2 0 0 0-2 2h16a2 2 0 0 0-2-2zM0 8V3h16v2h-6a1 1 0 1 0 0 2h6v7a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-4h6a1 1 0 1 0 0-2z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+            class="bi bi-calendar3-range-fill card-img-top" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2 0a2 2 0 0 0-2 2h16a2 2 0 0 0-2-2zM0 8V3h16v2h-6a1 1 0 1 0 0 2h6v7a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-4h6a1 1 0 1 0 0-2z" />
           </svg>
 
           <div class="card-body">
             <p class="card-text text-center">
-              Last Date for Full Paper Submission <br /><span
-                class="text-danger"
-                >March 03, 2025
+              Last Date for Full Paper Submission <br /><span class="text-danger">March 03, 2025
               </span>
             </p>
           </div>
         </div>
 
         <div class="card col-11 m-3 p-1 col-md-5 justify-content-center">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-bell-fill card-img-top mt-3" viewBox="0 0 16 16">
-            <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+            class="bi bi-bell-fill card-img-top mt-3" viewBox="0 0 16 16">
+            <path
+              d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
           </svg>
 
           <div class="card-body">
             <p class="card-text text-center">
-              Notification of Acceptance of Paper<br /><span class="text-danger"
-                >March 07, 2025</span
-              >
+              Notification of Acceptance of Paper<br /><span class="text-danger">March 07, 2025</span>
             </p>
           </div>
         </div>
 
         <div class="card col-11 m-3 p-1 col-md-5 justify-content-center">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-journal-bookmark-fill card-img-top mt-3" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z"/>
-            <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
-            <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+            class="bi bi-journal-bookmark-fill card-img-top mt-3" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z" />
+            <path
+              d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+            <path
+              d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
           </svg>
 
           <div class="card-body">
             <p class="card-text text-center">
-              Final Paper (Camera Ready) Submission<br /><span
-                class="text-danger"
-                >March 10, 2025</span
-              >
+              Final Paper (Camera Ready) Submission<br /><span class="text-danger">March 10, 2025</span>
             </p>
           </div>
         </div>
 
         <div class="card d col-11 m-3 p-1 col-md-5 justify-content-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-check-square-fill card-img-top mt-3" viewBox="0 0 16 16">
-            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/>
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor"
+            class="bi bi-check-square-fill card-img-top mt-3" viewBox="0 0 16 16">
+            <path
+              d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z" />
           </svg>
           <div class="card-body">
             <p class="card-text text-center">
-              Presentation Slides Submission <br /><span class="text-danger"
-                >March 20, 2025</span
-              >
+              Presentation Slides Submission <br /><span class="text-danger">March 20, 2025</span>
             </p>
           </div>
         </div>
@@ -671,57 +705,62 @@
     </div>
     <hr />
   </section>
-   
 
 
 
-    <!-- call-for-paper -->
-    <section id="call-for-paper" class="w3-animate-top">
+
+  <!-- call-for-paper -->
+  <section id="call-for-paper" class="w3-animate-top">
     <h1 class="title mt-5">Conference Tracks</h1>
-    <div class="container bg-primary py-5 mb-5 d-flex align-items-center justify-content-center" style="flex-direction: column;">
+    <div class="container bg-primary py-5 mb-5 d-flex align-items-center justify-content-center"
+      style="flex-direction: column;">
       <div>
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item text-center " width="100%">Track 1</li>
-          <li class="list-group-item text-center " width="100%"> Artificial Intelligence & Data Science – AI in Business, Big Data, Predictive Analytics, Customer Experience</li>
+          <li class="list-group-item text-center " width="100%"> Artificial Intelligence & Data Science – AI in
+            Business, Big Data, Predictive Analytics, Customer Experience</li>
         </ul>
-  
+
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item text-center " width="100%">Track 2</li>
-          <li class="list-group-item text-center " width="100%"> Commerce, FinTech, Blockchain & Digital Economy – E-Commerce, FinTech, Digital Payments, Consumer Behavior</li>
+          <li class="list-group-item text-center " width="100%"> Commerce, FinTech, Blockchain & Digital Economy –
+            E-Commerce, FinTech, Digital Payments, Consumer Behavior</li>
         </ul>
-  
+
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item text-center " width="100%">Track 3</li>
-          <li class="list-group-item text-center" width="100%">  Automation, Robotics & Digital Transformation – Robotics, Smart Technologies, AI in Supply Chain, IoT</li>
+          <li class="list-group-item text-center" width="100%"> Automation, Robotics & Digital Transformation –
+            Robotics, Smart Technologies, AI in Supply Chain, IoT</li>
         </ul>
-  
+
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item text-center " width="100%">Track 4</li>
-          <li class="list-group-item text-center"  width="100%"> Cloud Computing & Cybersecurity – Cloud Security, Cyber Threats, Risk Management</li>
+          <li class="list-group-item text-center" width="100%"> Cloud Computing & Cybersecurity – Cloud Security, Cyber
+            Threats, Risk Management</li>
         </ul>
       </div>
     </div>
     <hr>
   </section>
-    
 
-    <!-- contact -->
-    <section id="contact">
+
+  <!-- contact -->
+  <section id="contact">
     <h1 class="title mt-5">Contact</h1>
     <div class="container mb-5">
       <!-- Contact Section -->
       <div class="mb-3">
         <p class="fw-bold text-white ">
-          Send your full paper to 
-          <a href="mailto:arcvc.myl3@gmail.com" style="color: var(--sec);">arcvc.myl3@gmail.com</a>, Paper Template: 
+          Send your full paper to
+          <a href="mailto:arcvc.myl3@gmail.com" style="color: var(--sec);">arcvc.myl3@gmail.com</a>, Paper Template:
           APA FORMAT
         </p>
-        
+
       </div>
-  
+
       <!-- Table Section -->
       <div class="card col-12 col-md-9 mx-auto" style="border: none !important;">
-        <div class="card-header bg-primary text-dark fw-bold text-white" >CONTACT</div>
+        <div class="card-header bg-primary text-dark fw-bold text-white">CONTACT</div>
         <div class="table-responsive">
           <table class="table table-bordered table-striped">
             <thead class="table-light">
@@ -732,17 +771,17 @@
             </thead>
             <tbody>
               <tr class="mx-auto">
-                <td> <b>Convener:</b>  <br>Mr.R.Balakumar, M.Com., M.Phil. – Course-In-Charge for B.Com</td>
+                <td> <b>Convener:</b> <br>Mr.R. Balakumar </td>
                 <td>8072195164</td>
               </tr>
-              
+
               <tr class="mx-auto">
-                <td> <b>Coordinator:</b>  <br>Ms.N.Srividhya, M.Com.</td>
+                <td> <b>Coordinator:</b> <br>Ms.N. Srividhya </td>
                 <td>8056894190</td>
               </tr>
 
               <tr class="mx-auto">
-                <td> <b>Coordinator:</b>  <br>Ms.D.Nandhini, M.Sc, M.Phil.</td>
+                <td> <b>Coordinator:</b> <br>Ms.D. Nandhini </td>
                 <td>8072638424</td>
               </tr>
             </tbody>
@@ -751,100 +790,108 @@
       </div>
     </div>
     <hr>
-    
-    <div class="d-flex justify-content-center my-5"><iframe style="border: 5px solid #ffffff; filter:drop-shadow(0px 0px 15px  --other); border-radius: 15px;" class="mx-auto"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.2693810466526!2d79.62213017504646!3d11.093289789075426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a552694d4dd08f1%3A0x9769d2ad1ab2c915!2sA.R.C%20Viswanathan%20College!5e0!3m2!1sen!2sin!4v1738859568466!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="d-flex justify-content-center my-5"><iframe
+        style="border: 5px solid #ffffff; filter:drop-shadow(0px 0px 15px  --other); border-radius: 15px;"
+        class="mx-auto"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.2693810466526!2d79.62213017504646!3d11.093289789075426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a552694d4dd08f1%3A0x9769d2ad1ab2c915!2sA.R.C%20Viswanathan%20College!5e0!3m2!1sen!2sin!4v1738859568466!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
-    
+
   </section>
 
 
 
-    <!-- Organizing Committee -->
-    <div class="container py-5 mt-5" id="Organizing-Committee" >
-      <h2 class="text-center title mb-4">Committee</h2>
-    
-    <div class="row">
-        <div class="col-md-12 text-center box">
-            <h4 class="">Chief Patron</h4>
-            <h4 class="h2">Shri A.R.C.V.Muthukumar<br></h4><h3 class="lead" style="color: #6c757d;">Chairman of the college
+  <!-- Organizing Committee -->
+  <div class="container py-5 mt-5" id="Organizing-Committee">
+    <h2 class="text-center title mb-4">Committee</h2>
 
-            </h3>
-        </div>
+    <div class="row">
+      <div class="col-md-12 text-center box">
+        <h4 class="">Chief Patron</h4>
+        <h4 class="h2" style="color: rgb(114, 9, 9)">Shri A.R.C.V.Muthukumar<br></h4>
+        <h3 class="lead" style="color: #083d6b;">Chairman of the college
+
+        </h3>
+      </div>
     </div>
-    
+
     <div class="row">
-        <div class="col-md-12 text-center box">
-            <h4 class="">Patrons</h4>
-            <h4 class="h2">Mr. Raja Thangavelu<br></h4><h3 class="lead mb-5" style="color: #6c757d;">Senior Management Representative</h3>
-            <h4 class="h2">Dr. R. Venkatesh<br></h4><h3 class="lead" style="color: #6c757d;">Principal</h3>
-        </div>
+      <div class="col-md-12 text-center box">
+        <h4 class="">Patrons</h4>
+        <h4 class="h2" style="color: rgb(114, 9, 9)">Mr. Raja Thangavelu<br></h4>
+        <h3 class="lead mb-5" style="color: #083d6b;">Senior Management Representative</h3>
+        <h4 class="h2" style="color: rgb(114, 9, 9)">Dr. R. Venkatesh<br></h4>
+        <h3 class="lead" style="color: #083d6b;">Principal</h3>
+      </div>
     </div>
-    
+
     <div class="row">
-        <div class="col-md-12 box">
-            <h5 class="text-center strong-text h2">Advisory Committee</h5>
-            <ul class="list-unstyled text-center">
-                <li class="strong-text">Dr.Brahadeeswaran   Msc,  PHD</li>
+      <div class="col-md-12 box">
+        <h5 class="text-center strong-text h2" style="color: #0a6834;">Advisory Committee</h5>
+        <ul class="list-unstyled text-center">
+          <li class="strong-text">Dr.Brahadeeswaran, M.Sc., Ph.D.</li>
 
-                <li class="strong-text">Dr.JaffarAli   BM,MSC,PHD</strong></li>
+          <li class="strong-text">Dr.Jaffar Ali, B.M., M.Sc., Ph.D.</strong></li>
 
-                <li class="strong-text">Neeraj Adusupalli,BTECH,atMIT AUand MTECH  in cs at JNU </li>
+          <li class="strong-text">Mr.Neeraj Adusupalli, B.Tech.,at MIT AU and M.Tech.,(CS) at JNU </li>
 
 
-                <li class="strong-text">Swaminathangurusamy  IT Expert</li>
+          <li class="strong-text">Mr.Swaminathangurusamy, IT Expert</li>
 
-                <li class="strong-text">Mr.Sanjeev,IIM Bangalore</li>
+          <li class="strong-text">Mr.Sanjeev, IIM Bangalore</li>
 
-                <li class="strong-text">Mr..Neela  Mohan  M.COM,CIMA</li>
-                
-            </ul>
-        </div>
+          <li class="strong-text">Mr.Neela Mohan, M.Com., CIMA.,</li>
+
+        </ul>
+      </div>
     </div>
     <!-- <h2 class="text-center text-dark my-4">Organizing Committee</h2> -->
     <div class="row d-flex justify-content-around">
-        
-        <div class="col-md-12 box department-box">
-            <h5 class="text-center strong-text h2">Organizing Commitee</h5>
-            <ul class="list-unstyled text-center">
-              <p class="h3 mt-5 " style="text-decoration: underline">Convener</p>
 
-                <li class="strong-text">R.Balakumar, Head of the Department.</li>
+      <div class="col-md-12 box department-box">
+        <h5 class="text-center strong-text h2" style="color: #0a6834;">Organizing Commitee Members</h5>
+        <ul class="list-unstyled text-center">
+          <p class="h3 mt-5 " style="text-decoration: underline">Convener</p>
 
-                <p class="h3 mt-5 " style="text-decoration: underline">Coordinator</p>
+          <li class="strong-text">Mr. R.Balakumar, HoD of Commerce</li>
 
-                <li class="strong-text">Ms.N.Srividhya, Assistant Professor of Commerce</li>
-                <li class="strong-text">Mrs.D.Nandhini, Assistant Professor of Computer Science</li>
-                
-                <p class="h3 mt-5 " style="text-decoration: underline">Organising  committee members:</p>
-                
-                
-                <p class="h3 mt-4 ">Department of Computer Science:</p>
-                
-                <li class="strong-text">P.ponmani  Head of the  department</li>
-                <li class="strong-text">D.Nandhini,Assistant professor of CS</li>
-                <li class="strong-text">G.GaneshBakthavachalam,BE,CSM Professor of practice</li>
-                <li class="strong-text">Mr.Raja Thangavelu,Bsc,B.Tech,PGCBM,Professor  of practice</li>
-                <li class="strong-text">Mrs.D.Nandhini.,MSc(SE).,  MPhil. – Course-In-Charge for BCA</li>
-                <li class="strong-text">R.Dhanalakshmi, , Assistant professor of CS</li>
-                
-                <p class="h3 mt-4 ">Department of Commerce:</p>
-                
-                <li class="strong-text">R.Balakumar, Head  of  the  department</li>
-                <li class="strong-text">N.Srividhya, Assistant professor of commerce</li>
-                <li class="strong-text">K.Hariharan, Assistant professor of commerce</li>
-                <li class="strong-text">K.Valli, Assistant professor of commerce</li>
-                <li class="strong-text">B.Sasikala, Assistant professor of commerce</li>
-                <li class="strong-text">K.Ashok kumar, Assistant professor of commerce</li>
-                <li class="strong-text">G.Jayachithra, Assistant professor of commerce</li>
-                
-                
-            </ul>
-        </div>
+          <p class="h3 mt-5 " style="text-decoration: underline">Coordinators</p>
+
+          <li class="strong-text">Ms.N.Srividhya, Assistant Professor of Commerce</li>
+          <li class="strong-text">Mrs.D.Nandhini, Assistant Professor of Computer Science</li>
+
+          <p class="h3 mt-5 " style="text-decoration: underline">Organising Committee Members:</p>
+
+
+          <!-- <p class="h3 mt-4 ">Department of Computer Science:</p> -->
+
+          <li class="strong-text">Mrs. P. Ponmani, HoD of Computer Science</li>
+          <li class="strong-text">Mrs. D. Nandhini, Assistant Professor of Computer Science</li>
+          <li class="strong-text">Mr. G. Ganesh Bakthavachalam,B.E.,CSM., Professor of Practice</li>
+          <li class="strong-text">Mr. Raja Thangavelu,Bsc,B.Tech,PGCBM.,Professor of Practice</li>
+          <!-- <li class="strong-text">Mrs.D.Nandhini.,MSc(SE)., M.Phil., – Course-In-Charge for BCA</li> -->
+          <li class="strong-text">Ms. R.Dhanalakshmi, Assistant Professor of Computer Science</li>
+
+          <!-- <p class="h3 mt-4 ">Department of Commerce:</p> -->
+
+          <!-- <li class="strong-text">Mr. R.Balakumar, HoD of  Commerce</li> -->
+          <!-- <li class="strong-text">Ms. N.Srividhya, Assistant Professor of Commerce</li> -->
+          <li class="strong-text">Mr. K.Hariharan, Assistant Professor of Commerce</li>
+          <li class="strong-text">Mrs. K.Valli, Assistant Professor of Commerce</li>
+          <li class="strong-text">Mrs. B.Sasikala, Assistant Professor of Commerce</li>
+          <li class="strong-text">Mr. K.Ashok kumar, Assistant Professor of Commerce</li>
+          <li class="strong-text">Mrs. G.Jayachithra, Assistant Professor of Commerce</li>
+
+
+        </ul>
+      </div>
     </div>
-</div>
   </div>
-</div>
+  </div>
+  </div>
 
 
 
@@ -853,18 +900,22 @@
     <h1 class="title mt-5 w3-animate-top">Target Audience</h1>
     <div class="container bg-primary p-4 p-md-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; ">
-        This conference aims to bring together academic and professional communities, including undergraduate and postgraduate students, to foster meaningful knowledge exchange and collaboration in cutting-edge research domains. It provides a platform for sharing innovative ideas, exploring emerging trends, and building networks that drive progress in various fields.
+        This conference aims to bring together academic and professional communities, including undergraduate and
+        postgraduate students, to foster meaningful knowledge exchange and collaboration in cutting-edge research
+        domains. It provides a platform for sharing innovative ideas, exploring emerging trends, and building networks
+        that drive progress in various fields.
       </p>
     </div>
     <hr>
   </section>
 
-   <!-- publication details -->
-   <section id="publication" style="display: none;" class="w3-animate-top my-5">
+  <!-- publication details -->
+  <section id="publication" style="display: none;" class="w3-animate-top my-5">
     <h1 class="title mt-5 w3-animate-top">Publication Details</h1>
     <div class="container bg-primary p-4 p-md-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; ">
-        Selected Papers will be published in the conference proceedings with an ISBN and published in a UGC approved journal with additional charges.
+        Selected Papers will be Published in the Conference Proceedings with an ISBN and published in a UGC approved
+        journal with additional charges.
       </p>
     </div>
     <hr>
@@ -872,30 +923,44 @@
 
 
 
-    <!-- Abt-clg -->
-    <section id="Abt-clg" class="w3-animate-top" >
+  <!-- Abt-clg -->
+  <section id="Abt-clg" class="w3-animate-top">
     <h1 class="title mt-5 w3-animate-top title">about the college</h1>
     <div class="container bg-primary p-4 p-md-5 mb-5 w3-animate-top">
       <p class="text-white" style="font-size: medium; ">
-        ARC Viswanathan College is a prestigious self-financing institution affiliated to Annamalai University, Chidambaram, and recognized by the Government of Tamil Nadu. Established in 2000, the college has been dedicated to delivering high-quality education, particularly to students from rural and underprivileged backgrounds, for over two decades. Founded under the ARC N. Viswanathan Chettiyar Trust, the institution embodies the philanthropic vision of the ARC family, a distinguished name in the Mayiladuthurai district, renowned for its legacy in the gold and silver jewellery industry. The college offers a comprehensive range of undergraduate and postgraduate programs, including B.A. (English), B.Sc. (Mathematics, Computer Science) and B.Sc Artificial Inteligence, B.Com. (General, Computer Applications), B.C.A and B.B.A., along with M.Com. In addition to its academic endeavours, the trust has established several educational and community welfare institutions, such as ARC Natesan I.T.I., ARC Kamatchi Matriculation & Higher Secondary School, and ARC Kamatchi Kalyana Mandapam, with all revenues reinvested into developmental initiatives. With a steadfast commitment to academic excellence, intellectual growth, and holistic personality development, ARC Viswanathan College continues to nurture future leaders by equipping students with industry-relevant skills, ethical values, and a strong foundation for professional success and societal contribution.
+        ARC Viswanathan College is a prestigious self-financing institution affiliated to Annamalai University,
+        Chidambaram, and recognized by the Government of Tamil Nadu. Established in 2000, the college has been dedicated
+        to delivering high-quality education, particularly to students from rural and underprivileged backgrounds, for
+        over two decades. Founded under the ARC N. Viswanathan Chettiyar Trust, the institution embodies the
+        philanthropic vision of the ARC family, a distinguished name in the Mayiladuthurai district, renowned for its
+        legacy in the gold and silver jewellery industry. The college offers a comprehensive range of undergraduate and
+        postgraduate programs, including B.A. (English), B.Sc. (Mathematics), B.Sc.  (Computer Science) and B.Sc (Artificial
+        Inteligence), B.C.A., B.Com., B.B.A.,and B.Com. (Computer Applications), along with M.Com. In addition to its
+        academic endeavours, the trust has established several educational and community welfare institutions, such as
+        ARC Natesan I.T.I., ARC Kamatchi Matriculation & Higher Secondary School, and ARC Kamatchi Kalyana Mandapam,
+        with all revenues reinvested into developmental initiatives. With a steadfast commitment to academic excellence,
+        intellectual growth, and holistic personality development, ARC Viswanathan College continues to nurture future
+        leaders by equipping students with industry-relevant skills, ethical values, and a strong foundation for
+        professional success and societal contribution.
       </p>
     </div>
-    
+
   </section>
 
   <section id="speaker" style="display: none;">
     <h1 class="title mt-5">Resource Persons</h1>
-      
+
     <div class="container my-5">
       <div class="row d-flex justify-content-around">
-        <!-- From Uiverse.io by alexmaracinaru --> 
-        
+        <!-- From Uiverse.io by alexmaracinaru -->
+
         <div class="custom-card card-1 col-11 col-md-5 mt-4">
           <div class="custom-card-border-top">
           </div>
-          <div class="img" style="background-image: url(./images/profile.jpg); background-position: center; background-size: 100%; width: 8rem; height: 8rem;">
+          <div class="img"
+            style="background-image: url(./images/profile.jpg); background-position: center; background-size: 100%; width: 8rem; height: 8rem;">
           </div>
-          <span>Mr. Sanjeev  
+          <span>Mr. Sanjeev
           </span>
           <p class="job">Vice Presedent, Tech Mahindra</p>
         </div>
@@ -903,66 +968,69 @@
         <div class="custom-card card-1 col-11 col-md-5 mt-4">
           <div class="custom-card-border-top">
           </div>
-          <div class="img" style="background-image: url(./images/profile1.jpg); background-position: center; background-size: 100%; width: 8rem; height: 8rem;">
+          <div class="img"
+            style="background-image: url(./images/profile1.jpg); background-position: center; background-size: 100%; width: 8rem; height: 8rem;">
           </div>
-          <span>Dr Navaneetha Krishnan Rajagopal 
+          <span>Dr Navaneetha Krishnan Rajagopal
 
           </span>
           <p class="job">Faculty
-            College of Economics and Business Administration 
-            University of Technology and Applied Sciences
-            Salalah
+            College of Economics and Business Administration
+           <br> University of Technology and Applied Sciences
+            Salalah,
             Sultanate of Oman</p>
         </div>
 
-        
+
 
       </div>
     </div>
   </section>
 
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- bootstrap -->
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-      gsap.registerPlugin(ScrollTrigger) 
-      
-      gsap.to(".custom-card", {
-        y:-10,
-        repeat: -1,
-        duration: 1,
-        delay: 1,
-        yoyo: true,
-        stagger: {
-          each: 1
-        }
-      })
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- bootstrap -->
 
-      gsap.set("#download-btn", {
-        y:"-1000px"
-      })
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger)
 
-      gsap.to("#download-btn", {
-        y:0,
-        duration: 1,
-        ease: "back.out",
-        delay: 2,
-      })
+    gsap.to(".custom-card", {
+      y: -10,
+      repeat: -1,
+      duration: 1,
+      delay: 1,
+      yoyo: true,
+      stagger: {
+        each: 1
+      }
+    })
 
-      gsap.set("#floating-btn", {
-        y:-20,
-        text: "",
-        borderRadius: 100
-      })
+    gsap.set("#download-btn", {
+      y: "-1000px"
+    })
 
-      gsap.to("#floating-btn",
+    gsap.to("#download-btn", {
+      y: 0,
+      duration: 1,
+      ease: "back.out",
+      delay: 2,
+    })
+
+    gsap.set("#floating-btn", {
+      y: -20,
+      text: "",
+      borderRadius: 100
+    })
+
+    gsap.to("#floating-btn",
       {
         borderRadius: 50,
         text: "Register now",
-        y:10,
+        y: 10,
         color: "#000",
         rotatation: -5,
         repeat: -1,
@@ -972,333 +1040,334 @@
         ease: "bounce.out"
       })
 
-      
 
-      
+
+
   </script>
-    
-  </body>
-  <script>
-    const hero = document.getElementById("hero")
-    const regEndin =document.getElementById("reg-endin")
-    const conference = document.getElementById("conference")
-    const impDate =document.getElementById("imp-dates")
-    const contact  = document.getElementById("contact")
-    const callForPaper =document.getElementById("call-for-paper")
-    const organizingCommittee =document.getElementById("Organizing-Committee")
-    const targetAudience =document.getElementById("target-audience");
-    const publication =document.getElementById("publication");
-    const abtClg =document.getElementById("Abt-clg")
-    const speaker =document.getElementById("speaker")
 
-    
-    
-
-
-    // const popup = document.getElementById('popup');
-    //     const closeBtn = document.getElementById('closeBtn');
-    //     const downloadBtn = document.getElementById('downloadBtn');
-    //     const popupImage = document.getElementById('popupImage');
-
-    //     // Close popup when Close button is clicked
-    //     closeBtn.addEventListener('click', () => {
-    //         popup.style.display = 'none';
-    //         // document.body.style.overflow = 'auto'; // Allow scrolling
-    //     });
-
-    //     // Download image when Download button is clicked
-    //     downloadBtn.addEventListener('click', () => {
-    //         const link = document.createElement('a');
-    //         link.href = popupImage.src;
-    //         link.download = 'BROCHURE.png'; // Filename for the downloaded image
-    //         link.click();
-    //     });
-
-    //     // Show popup on page load
-    //     window.addEventListener('load', () => {
-    //         popup.style.display = 'flex';
-    //     });
-
-        function scrollByNavbarHeight() {
-  // Get the navbar height dynamically
-  const navbar = document.querySelector("nav");
-  const navbarHeight = navbar ? navbar.offsetHeight : 0; // Fallback to 0 if no navbar exists
-
-  // Get the current scroll position (how far the page has already scrolled)
-  const currentScrollPosition = window.pageYOffset;
-
-  // Scroll the page by the height of the navbar
-  window.scrollTo({
-    top: currentScrollPosition + navbarHeight, // Move down by navbar height
-    behavior: "smooth", // Smooth scroll
-  });
-}
+</body>
+<script>
+  const hero = document.getElementById("hero")
+  const regEndin = document.getElementById("reg-endin")
+  const conference = document.getElementById("conference")
+  const impDate = document.getElementById("imp-dates")
+  const contact = document.getElementById("contact")
+  const callForPaper = document.getElementById("call-for-paper")
+  const organizingCommittee = document.getElementById("Organizing-Committee")
+  const targetAudience = document.getElementById("target-audience");
+  const publication = document.getElementById("publication");
+  const abtClg = document.getElementById("Abt-clg")
+  const speaker = document.getElementById("speaker")
 
 
 
 
-    
-    function displayHero(){
-      
-      hero.style.display = "block"
-      regEndin.style.display = "none"
-      conference.style.display = "block"
-      impDate.style.display = "none"
-      contact.style.display = "none"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"
-      publication.style.display = "none"
-      abtClg.style.display = "block"
-  speaker.style.display = "none"
-    }
 
-    function displayContact() {
-  hero.style.display = "none";
-  regEndin.style.display = "none";
-  conference.style.display = "none";
-  impDate.style.display = "none";
-  console.log("Before:", contact.style.display);
-  contact.style.display = "block"; // Use "block" or another valid display value
-  callForPaper.style.display = "none";
-  console.log("after:", contact.style.display);
-  organizingCommittee.style.display = "none";
-  targetAudience.style.display = "none";
-  publication.style.display = "none";
-  abtClg.style.display = "none";
-  
- speaker.style.display = "none"
-}
+  // const popup = document.getElementById('popup');
+  //     const closeBtn = document.getElementById('closeBtn');
+  //     const downloadBtn = document.getElementById('downloadBtn');
+  //     const popupImage = document.getElementById('popupImage');
+
+  //     // Close popup when Close button is clicked
+  //     closeBtn.addEventListener('click', () => {
+  //         popup.style.display = 'none';
+  //         // document.body.style.overflow = 'auto'; // Allow scrolling
+  //     });
+
+  //     // Download image when Download button is clicked
+  //     downloadBtn.addEventListener('click', () => {
+  //         const link = document.createElement('a');
+  //         link.href = popupImage.src;
+  //         link.download = 'BROCHURE.png'; // Filename for the downloaded image
+  //         link.click();
+  //     });
+
+  //     // Show popup on page load
+  //     window.addEventListener('load', () => {
+  //         popup.style.display = 'flex';
+  //     });
+
+  function scrollByNavbarHeight() {
+    // Get the navbar height dynamically
+    const navbar = document.querySelector("nav");
+    const navbarHeight = navbar ? navbar.offsetHeight : 0; // Fallback to 0 if no navbar exists
+
+    // Get the current scroll position (how far the page has already scrolled)
+    const currentScrollPosition = window.pageYOffset;
+
+    // Scroll the page by the height of the navbar
+    window.scrollTo({
+      top: currentScrollPosition + navbarHeight, // Move down by navbar height
+      behavior: "smooth", // Smooth scroll
+    });
+  }
 
 
-    function displayRegister(){
-     
-      hero.style.display = "none"
-      regEndin.style.display = "block"
-      conference.style.display = "none"
-      impDate.style.display = "none"
-      contact.style.display = "block"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"
-      abtClg.style.display = "none"
-      speaker.style.display = "none"
-      
-    }
 
-    function displaySpeaker(){
-      
-      hero.style.display = "none"
-      regEndin.style.display = "none"
-      conference.style.display = "none"
-      impDate.style.display = "none"
-      contact.style.display = "none"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"
-      abtClg.style.display = "none"
-      speaker.style.display = "block"
-      
-    }
 
-    function displayConference(){
-      hero.style.display = "none"
-      regEndin.style.display = "none"
-      conference.style.display = "block"
-      impDate.style.display = "none"
-      contact.style.display = "none"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"
-      abtClg.style.display = "none"
-      speaker.style.display = "none"
-    }
 
-    function displayCollege(){
-      hero.style.display = "none"
-      regEndin.style.display = "none"
-      conference.style.display = "none"
-      impDate.style.display = "none"
-      contact.style.display = "none"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"
-      abtClg.style.display = "block"
-      speaker.style.display = "none"
-    }
+  function displayHero() {
 
-    function displayAbout(){
-      hero.style.display = "none"
-      regEndin.style.display = "none"
-      conference.style.display = "none"
-      impDate.style.display = "none"
-      contact.style.display = "none"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"
-      abtClg.style.display = "block"
-      speaker.style.display = "none"
-    }
+    hero.style.display = "block"
+    regEndin.style.display = "none"
+    conference.style.display = "block"
+    impDate.style.display = "none"
+    contact.style.display = "none"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "block"
+    speaker.style.display = "none"
+  }
 
-    function displayChief(){
-      hero.style.display = "none"
-      regEndin.style.display = "none"
-      conference.style.display = "none"
-      impDate.style.display = "none"
-      contact.style.display = "none"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "block"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"
-      abtClg.style.display = "none"
-      speaker.style.display = "none"
-    }
+  function displayContact() {
+    hero.style.display = "none";
+    regEndin.style.display = "none";
+    conference.style.display = "none";
+    impDate.style.display = "none";
+    console.log("Before:", contact.style.display);
+    contact.style.display = "block"; // Use "block" or another valid display value
+    callForPaper.style.display = "none";
+    console.log("after:", contact.style.display);
+    organizingCommittee.style.display = "none";
+    targetAudience.style.display = "none";
+    publication.style.display = "none";
+    abtClg.style.display = "none";
 
-    function displayCallforpapers(){
-      hero.style.display = "none"
-      regEndin.style.display = "none"
-      conference.style.display = "none"
-      impDate.style.display = "block"
-      contact.style.display = "none"
-      callForPaper.style.display = "block"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"
-      abtClg.style.display = "none"
-      speaker.style.display = "none"
-    }
+    speaker.style.display = "none"
+  }
 
-    function displayImpDates(){
-      hero.style.display = "none"
-      regEndin.style.display = "none"
-      conference.style.display = "none"
-      impDate.style.display = "block"
-      contact.style.display = "none"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"
-      abtClg.style.display = "none"
-      speaker.style.display = "none"
-    }
 
-    function displayRegister(){
-      hero.style.display = "none"
-      regEndin.style.display = "block"
-      conference.style.display = "none"
-      impDate.style.display = "none"
-      contact.style.display = "block"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"
-      abtClg.style.display = "none"
-      speaker.style.display = "none"
-    }
+  function displayRegister() {
 
-    function displayTarget(){
-      hero.style.display = "none"
-      regEndin.style.display = "none"
-      conference.style.display = "none"
-      impDate.style.display = "none"
-      contact.style.display = "none"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "block"
-      publication.style.display = "none"      
-      abtClg.style.display = "none"
-      speaker.style.display = "none"
-    }
+    hero.style.display = "none"
+    regEndin.style.display = "block"
+    conference.style.display = "none"
+    impDate.style.display = "none"
+    contact.style.display = "block"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "none"
+    speaker.style.display = "none"
 
-    function displayPublication(){
-      hero.style.display = "none"
-      regEndin.style.display = "none"
-      conference.style.display = "none"
-      impDate.style.display = "none"
-      contact.style.display = "none"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "block"      
-      abtClg.style.display = "none"
-      speaker.style.display = "none"
-    }
+  }
 
-    function contacts(){
-      hero.style.display = "none"
-      regEndin.style.display = "none"
-      conference.style.display = "none"
-      impDate.style.display = "none"
-      contact.style.display = "block"
-      callForPaper.style.display = "none"
-      organizingCommittee.style.display = "none"
-      targetAudience.style.display = "none"
-      publication.style.display = "none"      
-      abtClg.style.display = "none"
-      speaker.style.display = "none"
-       
-    }
-    
-   displayHero()
+  function displaySpeaker() {
 
-   document.addEventListener("DOMContentLoaded", function () {
-      const navLinks = document.querySelectorAll(".nav-link"); // Select all nav links
-      const navbarCollapse = document.getElementById("navbarNav"); // Navbar collapse element
+    hero.style.display = "none"
+    regEndin.style.display = "none"
+    conference.style.display = "none"
+    impDate.style.display = "none"
+    contact.style.display = "none"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "none"
+    speaker.style.display = "block"
 
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
-          bsCollapse.hide(); // Close the navbar
-        });
+  }
+
+  function displayConference() {
+    hero.style.display = "none"
+    regEndin.style.display = "none"
+    conference.style.display = "block"
+    impDate.style.display = "none"
+    contact.style.display = "none"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "none"
+    speaker.style.display = "none"
+  }
+
+  function displayCollege() {
+    hero.style.display = "none"
+    regEndin.style.display = "none"
+    conference.style.display = "none"
+    impDate.style.display = "none"
+    contact.style.display = "none"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "block"
+    speaker.style.display = "none"
+  }
+
+  function displayAbout() {
+    hero.style.display = "none"
+    regEndin.style.display = "none"
+    conference.style.display = "none"
+    impDate.style.display = "none"
+    contact.style.display = "none"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "block"
+    speaker.style.display = "none"
+  }
+
+  function displayChief() {
+    hero.style.display = "none"
+    regEndin.style.display = "none"
+    conference.style.display = "none"
+    impDate.style.display = "none"
+    contact.style.display = "none"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "block"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "none"
+    speaker.style.display = "none"
+  }
+
+  function displayCallforpapers() {
+    hero.style.display = "none"
+    regEndin.style.display = "none"
+    conference.style.display = "none"
+    impDate.style.display = "block"
+    contact.style.display = "none"
+    callForPaper.style.display = "block"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "none"
+    speaker.style.display = "none"
+  }
+
+  function displayImpDates() {
+    hero.style.display = "none"
+    regEndin.style.display = "none"
+    conference.style.display = "none"
+    impDate.style.display = "block"
+    contact.style.display = "none"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "none"
+    speaker.style.display = "none"
+  }
+
+  function displayRegister() {
+    hero.style.display = "none"
+    regEndin.style.display = "block"
+    conference.style.display = "none"
+    impDate.style.display = "none"
+    contact.style.display = "block"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "none"
+    speaker.style.display = "none"
+  }
+
+  function displayTarget() {
+    hero.style.display = "none"
+    regEndin.style.display = "none"
+    conference.style.display = "none"
+    impDate.style.display = "none"
+    contact.style.display = "none"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "block"
+    publication.style.display = "none"
+    abtClg.style.display = "none"
+    speaker.style.display = "none"
+  }
+
+  function displayPublication() {
+    hero.style.display = "none"
+    regEndin.style.display = "none"
+    conference.style.display = "none"
+    impDate.style.display = "none"
+    contact.style.display = "none"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "block"
+    abtClg.style.display = "none"
+    speaker.style.display = "none"
+  }
+
+  function contacts() {
+    hero.style.display = "none"
+    regEndin.style.display = "none"
+    conference.style.display = "none"
+    impDate.style.display = "none"
+    contact.style.display = "block"
+    callForPaper.style.display = "none"
+    organizingCommittee.style.display = "none"
+    targetAudience.style.display = "none"
+    publication.style.display = "none"
+    abtClg.style.display = "none"
+    speaker.style.display = "none"
+
+  }
+
+  displayHero()
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link"); // Select all nav links
+    const navbarCollapse = document.getElementById("navbarNav"); // Navbar collapse element
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: true });
+        bsCollapse.hide(); // Close the navbar
       });
     });
+  });
 
-    function updateCountdown(targetDate) {
-      const now = new Date();
-      const remainingTime = new Date(targetDate) - now;
+  function updateCountdown(targetDate) {
+    const now = new Date();
+    const remainingTime = new Date(targetDate) - now;
 
-      if (remainingTime > 0) {
-        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    if (remainingTime > 0) {
+      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor(
+        (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-        document.getElementById("days").textContent = days
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("hours").textContent = hours
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("minutes").textContent = minutes
-          .toString()
-          .padStart(2, "0");
-        document.getElementById("seconds").textContent = seconds
-          .toString()
-          .padStart(2, "0");
-      } else {
-        document.querySelector(".countdown-header").textContent =
-          "The event has started!";
-        document
-          .querySelectorAll(".countdown-time")
-          .forEach((el) => (el.textContent = "00"));
-      }
+      document.getElementById("days").textContent = days
+        .toString()
+        .padStart(2, "0");
+      document.getElementById("hours").textContent = hours
+        .toString()
+        .padStart(2, "0");
+      document.getElementById("minutes").textContent = minutes
+        .toString()
+        .padStart(2, "0");
+      document.getElementById("seconds").textContent = seconds
+        .toString()
+        .padStart(2, "0");
+    } else {
+      document.querySelector(".countdown-header").textContent =
+        "The event has started!";
+      document
+        .querySelectorAll(".countdown-time")
+        .forEach((el) => (el.textContent = "00"));
     }
+  }
 
-    // Set your target date here
-    const targetDate = "2025-03-15T00:00:00";
+  // Set your target date here
+  const targetDate = "2025-03-15T00:00:00";
 
-    // Update the countdown every second
-    setInterval(() => updateCountdown(targetDate), 1000);
-    updateCountdown(targetDate); // Initial call
-  </script>
+  // Update the countdown every second
+  setInterval(() => updateCountdown(targetDate), 1000);
+  updateCountdown(targetDate); // Initial call
+</script>
+
 </html>
